@@ -1,14 +1,14 @@
 import './App.css';
-// import Header from './app/Header';
-// import Main from './app/Main';
-// import Footer from './app/Footer';
+import Header from './components/Header';
+import Main from './components/Main';
+import Footer from './components/Footer';
 
 function App() {
 	return (
 		<>
-			{/* <Header />
+			<Header />
 			<Main />
-			<Footer /> */}
+			<Footer />
 		</>
 	);
 }
