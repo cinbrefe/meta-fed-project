@@ -1,4 +1,15 @@
-# Getting Started with Create React App
+# Little Lemon Restaurant
+
+A Coursera capstone project for the Front-End Web Developer program. This responsive restaurant landing page was built with React and features a modern, mobile-friendly design for Little Lemon, a Mediterranean-inspired dining concept.
+
+## Project Highlights
+
+- Modern restaurant landing page layout
+- Responsive design for desktop and mobile screens
+- SEO-friendly metadata and social preview tags
+- Clean React component structure for reuse and scalability
+
+## Getting Started
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
