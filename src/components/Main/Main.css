@@ -1,0 +1,26 @@
+.page-main {
+	max-width: var(--container-width);
+	margin: 0 auto;
+	padding: 4rem var(--spacing-lg) var(--spacing-2xl);
+	text-align: center;
+}
+
+.hero-title {
+	font-size: var(--font-size-2xl);
+	line-height: var(--line-height-heading);
+	margin-bottom: var(--spacing-md);
+	color: var(--color-primary-dark);
+}
+
+.hero-text {
+	font-size: var(--font-size-xl);
+	max-width: 680px;
+	margin: 0 auto;
+	color: var(--color-muted);
+}
+
+@media (max-width: 600px) {
+	.hero-title {
+		font-size: var(--font-size-xl);
+	}
+}

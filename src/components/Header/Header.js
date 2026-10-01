@@ -1,9 +1,10 @@
-import Nav from './Nav';
+import './Header.css';
+import Nav from '../Nav/Nav';
 
 function Header() {
 	return (
-		<header>
-			<a href="/">
+		<header className="site-header">
+			<a href="/" className="brand-link">
 				<span className="offscreen">Little Lemon</span>
 			</a>
 			<Nav />
