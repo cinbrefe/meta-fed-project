@@ -1,0 +1,115 @@
+.main-nav__toggle {
+	background: transparent;
+	border: none;
+	color: var(--color-surface);
+	cursor: pointer;
+	display: flex;
+	flex-direction: column;
+	font-weight: var(--font-weight-semibold);
+	gap: var(--spacing-xs);
+	height: 40px;
+	justify-content: center;
+	padding: var(--spacing-xs) var(--spacing-xs);
+}
+
+@media (min-width: 992px) {
+	.main-nav__toggle {
+		display: none;
+	}
+}
+
+.main-nav__bar {
+	background-color: var(--color-surface);
+	display: block;
+	height: 2px;
+	transition: transform 160ms ease, opacity 160ms ease;
+	width: 20px;
+}
+
+.main-nav__toggle--open .main-nav__bar--top {
+	transform: translateY(calc(var(--spacing-xs) + 2px)) rotate(45deg);
+}
+
+.main-nav__toggle--open .main-nav__bar--middle {
+	opacity: 0;
+}
+
+.main-nav__toggle--open .main-nav__bar--bottom {
+	transform: translateY(calc(0px - var(--spacing-xs) - 2px)) rotate(-45deg);
+}
+
+.main-nav__list {
+	display: none;
+	flex-direction: column;
+	gap: var(--spacing-md);
+	left: 0;
+	list-style: none;
+	margin: 0;
+	max-height: calc(100dvh - 100%);
+	overflow-y: auto;
+	overscroll-behavior: contain;
+	padding: var(--spacing-md) 0 0;
+	position: absolute;
+	right: 0;
+	top: calc(100% + 1px);
+	transform: none;
+	width: auto;
+}
+
+@media (min-width: 992px) {
+	.main-nav__list {
+		align-items: center;
+		display: flex;
+		flex-direction: row;
+		flex-wrap: nowrap;
+		justify-content: flex-end;
+		max-height: none;
+		overflow-y: visible;
+		padding: 0;
+		position: static;
+		transform: none;
+		width: auto;
+	}
+}
+
+.main-nav__list--open {
+	display: flex;
+}
+
+.main-nav__link {
+	color: var(--color-surface);
+	font-weight: var(--font-weight-extra-bold);
+	text-decoration: none;
+	text-transform: uppercase;
+}
+
+.main-nav__link:hover,
+.main-nav__link:focus {
+	text-decoration: underline;
+}
+
+@media (max-width: 991.98px) {
+	.main-nav__list {
+		background: var(--color-accent);
+		box-shadow: var(--shadow-soft);
+		gap: 0;
+		padding: var(--spacing-sm) var(--spacing-lg);
+		z-index: 10;
+	}
+
+	.main-nav__item + .main-nav__item {
+		border-top: 1px solid rgba(255, 255, 255, 0.2);
+	}
+
+	.main-nav__link {
+		display: block;
+		color: var(--color-white);
+		padding: 0.875rem 0;
+	}
+
+	.main-nav__link:hover,
+	.main-nav__link:focus-visible {
+		color: var(--color-primary);
+		text-decoration: none;
+	}
+}

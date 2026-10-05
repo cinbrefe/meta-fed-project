@@ -1,0 +1,15 @@
+.site-header {
+	position: relative;
+}
+
+.site-header__inner {
+	display: flex;
+	align-items: center;
+	flex-direction: row;
+	justify-content: space-between;
+	padding-block: var(--spacing-md);
+}
+
+.site-header__logo {
+	flex-shrink: 0;
+}

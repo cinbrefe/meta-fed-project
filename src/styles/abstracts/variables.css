@@ -10,7 +10,6 @@
 	--color-muted: #999;
 	--color-interactive: var(--color-primary);
 	--color-interactive-hover: var(--color-surface);
-	--color-primary-hover: #e5c100;
 	--color-gray: #EDEFEE;
 	--color-border: rgba(117, 117, 117, 0.2);
 	--color-overlay: rgba(0, 0, 0, 0.5);
@@ -45,10 +44,6 @@
 
 	/* Layout */
 	--container-width: 1200px;
-	--breakpoint-sm: 576px;
-	--breakpoint-md: 768px;
-	--breakpoint-lg: 992px;
-	--breakpoint-xl: 1200px;
 
 	/* Borders */
 	--radius-sm: 0.5rem;
