@@ -1,8 +1,9 @@
-import { useState, useEffect } from 'react';
+import { useEffect, useState } from 'react';
 
-import './Header.css';
 import Nav from '../Nav/Nav';
 import logo from '../../../assets/images/svg/logo-little-lemon.svg';
+
+import './Header.css';
 
 export default function Header() {
 	const [isScrolled, setIsScrolled] = useState(false);

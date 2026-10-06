@@ -1,15 +1,12 @@
-import Card from '../Card/Card';
-
 import './CardGrid.css';
 
-export default function CardGrid({ items = [] }) {
+// modifier: optional layout variant, e.g. "two-col" → .card-grid--two-col
+export default function CardGrid({ items = [], renderItem, modifier }) {
 	return (
-		// role="list" restores list semantics in Safari/VoiceOver, which drops them when list-style is none
-		// eslint-disable-next-line jsx-a11y/no-redundant-roles
-		<ul className="card-grid" role="list">
+		<ul className={`card-grid${modifier ? ` card-grid--${modifier}` : ''}`}>
 			{items.map(({ id, ...item }) => (
 				<li className="card-grid__item" key={id}>
-					<Card {...item} />
+					{renderItem(item)}
 				</li>
 			))}
 		</ul>

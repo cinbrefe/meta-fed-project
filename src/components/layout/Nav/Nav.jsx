@@ -1,4 +1,5 @@
 import { useRef, useState } from 'react';
+
 import './Nav.css';
 
 const navItems = [

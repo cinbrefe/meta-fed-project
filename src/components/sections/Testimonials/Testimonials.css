@@ -1,0 +1,13 @@
+.testimonials {
+	background-color: var(--color-background-inverse);
+}
+
+.testimonials__inner {
+	display: flex;
+	flex-direction: column;
+	gap: var(--spacing-2xl);
+}
+
+.testimonials__title {
+	color: var(--color-text-inverse);
+}
