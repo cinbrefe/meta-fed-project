@@ -1,0 +1,22 @@
+.modal {
+	border: none;
+	border-radius: var(--radius-lg);
+	max-width: min(32rem, calc(100% - 2 * var(--spacing-lg)));
+	padding: 0;
+	width: 100%;
+}
+
+.modal::backdrop {
+	background-color: var(--color-overlay);
+}
+
+.modal__content {
+	padding: var(--spacing-lg);
+}
+
+.modal__header {
+	align-items: center;
+	display: flex;
+	justify-content: space-between;
+	margin-block-end: var(--spacing-lg);
+}

@@ -1,8 +1,9 @@
 // Placeholders (#top) until the real pages and accounts exist
+// Items with `action` instead of `href` render as buttons (e.g. 'reserve' opens the booking modal)
 
 // Shared by the header nav and the footer's Company column
 export const siteLinks = [
-	{ label: 'Reservations', href: '#top' },
+	{ label: 'Reservations', action: 'reserve' },
 	{ label: 'Menu', href: '#menu' },
 	{ label: 'Testimonials', href: '#testimonials' },
 	{ label: 'About', href: '#about' },

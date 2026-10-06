@@ -5,7 +5,7 @@ import logo from '../../../assets/images/svg/logo-little-lemon.svg';
 
 import './Header.css';
 
-export default function Header() {
+export default function Header({ onReserveClick }) {
 	const [isScrolled, setIsScrolled] = useState(false);
 
 	useEffect(() => {
@@ -25,7 +25,7 @@ export default function Header() {
 				<a href="/" className="site-header__logo">
 					<img src={logo} alt="Little Lemon home" width="191" height="53" />
 				</a>
-				<Nav />
+				<Nav onReserveClick={onReserveClick} />
 			</div>
 		</header>
 	);

@@ -54,6 +54,13 @@
 	font-weight: var(--font-weight-medium);
 }
 
+.site-footer__link--button {
+	background: none;
+	border: none;
+	cursor: pointer;
+	text-align: start;
+}
+
 .site-footer__link:hover,
 .site-footer__link:focus-visible {
 	text-decoration: underline;

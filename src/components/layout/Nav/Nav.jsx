@@ -4,7 +4,7 @@ import { siteLinks } from '../../../data/navigation';
 
 import './Nav.css';
 
-export default function Nav() {
+export default function Nav({ onReserveClick }) {
 	const [isOpen, setIsOpen] = useState(false);
 	const toggleRef = useRef(null);
 
@@ -17,6 +17,11 @@ export default function Nav() {
 	};
 
 	const handleToggle = () => setIsOpen((open) => !open);
+
+	const handleReserve = () => {
+		setIsOpen(false);
+		onReserveClick();
+	};
 
 	return (
 		<nav className="main-nav" aria-label="Main navigation" onKeyDown={handleKeyDown}>
@@ -38,11 +43,17 @@ export default function Nav() {
 				id="primary-navigation"
 				className={`main-nav__list${isOpen ? ' main-nav__list--open' : ''}`}
 			>
-				{siteLinks.map(({ label, href }) => (
+				{siteLinks.map(({ label, href, action }) => (
 					<li key={label} className="main-nav__item">
-						<a href={href} className="main-nav__link" onClick={() => setIsOpen(false)}>
-							{label}
-						</a>
+						{action === 'reserve' ? (
+							<button type="button" className="main-nav__link main-nav__link--button" onClick={handleReserve}>
+								{label}
+							</button>
+						) : (
+							<a href={href} className="main-nav__link" onClick={() => setIsOpen(false)}>
+								{label}
+							</a>
+						)}
 					</li>
 				))}
 			</ul>

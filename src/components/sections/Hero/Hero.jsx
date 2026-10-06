@@ -2,7 +2,7 @@ import heroImage from '../../../assets/images/hero-image.jpg';
 
 import './Hero.css';
 
-export default function Hero() {
+export default function Hero({ onReserveClick }) {
 	return (
 		<section className="hero page-section page-section--compact">
 			<div className="container hero__inner">
@@ -14,7 +14,13 @@ export default function Hero() {
 					<p className="hero__text">
 						We are a family owned Mediterranean restaurant, focused on traditional recipes served with a modern twist.
 					</p>
-					<button className="button button--primary hero__button">Reserve a Table</button>
+					<button
+						type="button"
+						className="button button--primary hero__button"
+						onClick={onReserveClick}
+					>
+						Reserve a Table
+					</button>
 				</div>
 				<img className="hero__image" src={heroImage} alt="Little Lemon restaurant" />
 			</div>

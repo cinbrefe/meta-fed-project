@@ -132,6 +132,21 @@
 	}
 }
 
+/* Buttons in the list (e.g. Reservations) look exactly like the links */
+.main-nav__link--button {
+	background: none;
+	border: none;
+	cursor: pointer;
+	text-align: start;
+	width: 100%;
+}
+
+@media (min-width: 992px) {
+	.main-nav__link--button {
+		width: auto;
+	}
+}
+
 .main-nav__link:hover,
 .main-nav__link:focus-visible {
 	color: var(--color-primary);
