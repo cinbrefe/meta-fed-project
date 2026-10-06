@@ -1,17 +1,60 @@
 .site-footer {
-	background: var(--color-primary-dark);
-	color: var(--color-text-strong);
-	padding: var(--spacing-md);
-	text-align: center;
+	background-color: var(--color-surface-muted);
+	padding-block: var(--spacing-2xl);
 }
 
-@media (min-width: 576px) {
+@media (min-width: 768px) {
 	.site-footer {
-		padding: 1.25rem var(--spacing-lg);
+		padding-block: var(--spacing-3xl);
 	}
 }
 
-.site-footer__text {
-	font-size: 0.95rem;
-	opacity: 0.9;
+/* Mobile: logo on top, then Company | Contact, then Follow us. Desktop: logo + 3 columns */
+.site-footer__inner {
+	display: grid;
+	gap: var(--spacing-xl) var(--spacing-lg);
+	grid-template-columns: repeat(2, minmax(0, 1fr));
+}
+
+@media (min-width: 768px) {
+	.site-footer__inner {
+		grid-template-columns: minmax(0, 1.5fr) repeat(3, minmax(0, 1fr));
+	}
+}
+
+.site-footer__logo {
+	grid-column: 1 / -1;
+}
+
+@media (min-width: 768px) {
+	.site-footer__logo {
+		grid-column: auto;
+	}
+}
+
+.site-footer__column {
+	font-style: normal; /* <address> is italic by default */
+}
+
+.site-footer__title {
+	font-family: var(--font-family-body);
+	font-size: var(--font-size-lg);
+	line-height: var(--line-height-tight);
+	margin-block-end: var(--spacing-md);
+	text-transform: uppercase;
+}
+
+.site-footer__list {
+	display: grid;
+	gap: var(--spacing-sm);
+}
+
+.site-footer__link {
+	color: var(--color-text);
+	font-weight: var(--font-weight-medium);
+}
+
+.site-footer__link:hover,
+.site-footer__link:focus-visible {
+	text-decoration: underline;
 }

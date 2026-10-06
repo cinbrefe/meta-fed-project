@@ -1,14 +1,8 @@
 import { useRef, useState } from 'react';
 
-import './Nav.css';
+import { siteLinks } from '../../../data/navigation';
 
-const navItems = [
-	{ label: 'About', href: '#about' },
-	{ label: 'Menu', href: '#menu' },
-	{ label: 'Reservation', href: '#reservation' },
-	{ label: 'Order Online', href: '#order' },
-	{ label: 'Login', href: '#login' },
-];
+import './Nav.css';
 
 export default function Nav() {
 	const [isOpen, setIsOpen] = useState(false);
@@ -44,7 +38,7 @@ export default function Nav() {
 				id="primary-navigation"
 				className={`main-nav__list${isOpen ? ' main-nav__list--open' : ''}`}
 			>
-				{navItems.map(({ label, href }) => (
+				{siteLinks.map(({ label, href }) => (
 					<li key={label} className="main-nav__item">
 						<a href={href} className="main-nav__link" onClick={() => setIsOpen(false)}>
 							{label}
