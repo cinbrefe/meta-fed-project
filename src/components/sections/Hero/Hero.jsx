@@ -3,7 +3,7 @@ import heroImage from '../../../assets/images/hero-image.jpg';
 
 export default function Hero() {
 	return (
-		<section className="hero page-section--compact">
+		<section className="hero page-section page-section--compact">
 			<div className="container hero__inner">
 				<div className="hero__content">
 					<h1 className="hero__title">
