@@ -2,10 +2,10 @@
 
 // Shared by the header nav and the footer's Company column
 export const siteLinks = [
-	{ label: 'About', href: '#about' },
-	{ label: 'Menu', href: '#menu' },
 	{ label: 'Reservations', href: '#top' },
-	{ label: 'Order online', href: '#top' },
+	{ label: 'Menu', href: '#menu' },
+	{ label: 'Testimonials', href: '#testimonials' },
+	{ label: 'About', href: '#about' },
 	{ label: 'Login', href: '#top' },
 ];
 
