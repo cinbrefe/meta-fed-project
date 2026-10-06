@@ -1,0 +1,93 @@
+.hero {
+	--color-focus-ring: var(--color-primary); /* the default green ring is invisible on the green hero */
+	--hero-image-width: 370px;
+
+	background-color: var(--color-accent);
+	padding-top: var(--spacing-xl);
+}
+
+@media (min-width: 768px) {
+	.hero {
+		padding-top: var(--spacing-3xl);
+	}
+}
+
+.hero__inner {
+	display: grid;
+	gap: var(--spacing-xl);
+}
+
+@media (min-width: 768px) {
+	.hero__inner {
+		align-items: start;
+		grid-template-columns: minmax(0, 1fr) minmax(0, var(--hero-image-width));
+	}
+}
+
+.hero__content {
+	align-self: center;
+}
+
+.hero__title {
+	color: var(--color-primary);
+	font-size: var(--font-size-3xl);
+	margin-block-end: var(--spacing-lg);
+}
+
+@media (min-width: 768px) {
+	.hero__title {
+		font-size: var(--font-size-display);
+	}
+}
+
+.hero__location {
+	color: var(--color-text-inverse);
+	display: block;
+	font-size: var(--font-size-2xl);
+	font-weight: var(--font-weight-regular);
+}
+
+@media (min-width: 768px) {
+	.hero__location {
+		font-size: var(--font-size-subtitle);
+	}
+}
+
+.hero__text {
+	color: var(--color-text-inverse);
+	font-size: var(--font-size-lead);
+	line-height: var(--line-height-body);
+	margin-block-end: var(--spacing-xl);
+	max-width: 390px;
+}
+
+@media (min-width: 768px) {
+	.hero__text {
+		margin-block-end: var(--spacing-2xl);
+	}
+}
+
+.hero__button {
+	width: 100%;
+}
+
+@media (min-width: 768px) {
+	.hero__button {
+		width: auto;
+	}
+}
+
+/* Hidden on mobile so the text and button fit on the first screen */
+.hero__image {
+	display: none;
+}
+
+@media (min-width: 768px) {
+	.hero__image {
+		aspect-ratio: 370 / 425;
+		display: block;
+		max-width: var(--hero-image-width);
+		object-fit: cover;
+		width: 100%;
+	}
+}

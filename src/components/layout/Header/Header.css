@@ -1,15 +1,29 @@
 .site-header {
-	position: relative;
+	background-color: var(--color-background);
+	position: sticky;
+	top: 0;
+	transition: box-shadow var(--duration-base) var(--easing-standard);
+	z-index: var(--z-header);
+}
+
+.site-header--scrolled {
+	box-shadow: var(--shadow-soft);
 }
 
 .site-header__inner {
-	display: flex;
 	align-items: center;
-	flex-direction: row;
+	display: flex;
+	gap: var(--spacing-md);
 	justify-content: space-between;
 	padding-block: var(--spacing-md);
 }
 
 .site-header__logo {
+	border-radius: var(--radius-sm);
 	flex-shrink: 0;
+}
+
+.site-header__logo:focus-visible {
+	outline: 3px solid var(--color-focus-ring);
+	outline-offset: 4px;
 }

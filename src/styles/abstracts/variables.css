@@ -1,55 +1,109 @@
+/*
+ * Design tokens
+ *
+ * Primitives hold raw values from the Little Lemon style guide.
+ * Semantic tokens describe a role and point at primitives.
+ * Components should only use semantic tokens.
+ *
+ * Breakpoints (custom properties can't be used in media queries):
+ * sm 576px, md 768px, lg 992px, xl 1200px
+ */
 :root {
-	/* Colors */
-	--color-background: var(--color-white);
-	--color-black: #000;
+	/* ---------- Color primitives ---------- */
+	--color-brand-green: #495e57;
+	--color-brand-green-dark: #3c4f49;
+	--color-brand-yellow: #f4ce14;
+	--color-brand-salmon: #ee9972;
+	--color-brand-peach: #fbdabb;
 	--color-white: #fff;
-	--color-primary: #f4ce14;
-	--color-accent: #495e57;
-	--color-surface: #333;
-	--color-text: var(--color-black);
-	--color-muted: #999;
-	--color-interactive: var(--color-primary);
-	--color-interactive-hover: var(--color-surface);
-	--color-gray: #EDEFEE;
-	--color-border: rgba(117, 117, 117, 0.2);
+	--color-gray-100: #edefee;
+	--color-gray-400: #999;
+	--color-gray-900: #333;
+	--color-black: #000;
+
+	/* ---------- Semantic colors ---------- */
+	--color-primary: var(--color-brand-yellow);
+	--color-accent: var(--color-brand-green);
+	--color-accent-hover: var(--color-brand-green-dark);
+	--color-accent-subtle: rgba(73, 94, 87, 0.08);
+
+	--color-background: var(--color-white);
+	--color-surface-muted: var(--color-gray-100);
 	--color-overlay: rgba(0, 0, 0, 0.5);
 
-	/* Typography */
-	--font-base: 'Inter', sans-serif;
+	--color-text: var(--color-black);
+	--color-text-strong: var(--color-gray-900);
+	--color-text-muted: var(--color-gray-400);
+	--color-text-inverse: var(--color-white);
+
+	--color-interactive: var(--color-primary);
+	--color-interactive-text: var(--color-text);
+	--color-interactive-hover: var(--color-gray-900);
+	--color-interactive-hover-text: var(--color-text-inverse);
+
+	--color-border: rgba(117, 117, 117, 0.2);
+	--color-border-inverse: rgba(255, 255, 255, 0.2);
+	--color-focus-ring: var(--color-accent);
+
+	/* ---------- Typography ---------- */
+	--font-family-body: 'Karla', sans-serif;
+	--font-family-heading: 'Markazi Text', serif;
+
 	--font-weight-light: 300;
 	--font-weight-regular: 400;
 	--font-weight-medium: 500;
 	--font-weight-semibold: 600;
 	--font-weight-bold: 700;
 	--font-weight-extra-bold: 800;
-	--font-size-base: 100%;
-	--font-size-xs: 0.75rem;
-	--font-size-sm: 0.875rem;
-	--font-size-md: var(--font-size-base);
-	--font-size-lg: 1.25rem;
-	--font-size-xl: 1.5rem;
-	--font-size-2xl: 2rem;
-	--font-size-3xl: 3rem;
-	--font-size-4xl: 4rem;
-	--line-height-body: 1.6;
-	--line-height-heading: 1.15;
 
-	/* Spacing */
-	--spacing-xs: 0.25rem;
-	--spacing-sm: 0.5rem;
-	--spacing-md: 1rem;
-	--spacing-lg: 1.5rem;
-	--spacing-xl: 2rem;
-	--spacing-2xl: 3rem;
+	/* Scale (1rem = 16px) */
+	--font-size-root: 100%;
+	--font-size-xs: 0.75rem;   /* 12px */
+	--font-size-sm: 0.875rem;  /* 14px */
+	--font-size-md: 1rem;      /* 16px */
+	--font-size-lg: 1.25rem;   /* 20px */
+	--font-size-xl: 1.5rem;    /* 24px */
+	--font-size-2xl: 2rem;     /* 32px */
+	--font-size-3xl: 3rem;     /* 48px */
+	--font-size-4xl: 4rem;     /* 64px */
 
-	/* Layout */
-	--container-width: 1200px;
+	/* Roles from the style guide */
+	--font-size-display: var(--font-size-4xl);
+	--font-size-subtitle: 2.5rem; /* 40px */
+	--font-size-lead: 1.125rem;   /* 18px */
 
-	/* Borders */
+	--line-height-heading: 0.85;
+	--line-height-tight: 1.2;
+	--line-height-body: 1.625;
+
+	/* ---------- Spacing ---------- */
+	--spacing-xs: 0.25rem; /* 4px */
+	--spacing-sm: 0.5rem;  /* 8px */
+	--spacing-md: 1rem;    /* 16px */
+	--spacing-lg: 1.5rem;  /* 24px */
+	--spacing-xl: 2rem;    /* 32px */
+	--spacing-2xl: 3rem;   /* 48px */
+	--spacing-3xl: 4rem;   /* 64px */
+
+	/* ---------- Layout ---------- */
+	--container-width: 910px;
+	--header-offset: 5.5rem; /* ~sticky header height (85px), so anchor jumps don't land under it */
+
+	/* ---------- Borders ---------- */
 	--radius-sm: 0.5rem;
 	--radius-md: 1rem;
 	--radius-lg: 1.25rem;
 
-	/* Shadows */
+	/* ---------- Shadows ---------- */
 	--shadow-soft: 0 0.625rem 1.875rem rgba(33, 35, 38, 0.08);
+
+	/* ---------- Motion ---------- */
+	--duration-fast: 160ms;
+	--duration-base: 200ms;
+	--easing-standard: ease;
+
+	/* ---------- Z-index ---------- */
+	--z-dropdown: 10;
+	--z-header: 50;
+	--z-skip-link: 100;
 }

@@ -1,4 +1,4 @@
-import { useState } from 'react';
+import { useRef, useState } from 'react';
 import './Nav.css';
 
 const navItems = [
@@ -12,15 +12,28 @@ const navItems = [
 
 export default function Nav() {
 	const [isOpen, setIsOpen] = useState(false);
+	const toggleRef = useRef(null);
+
+	// Close on Escape and move focus back to the toggle so keyboard users keep their place
+	const handleKeyDown = (e) => {
+		if (e.key === 'Escape' && isOpen) {
+			setIsOpen(false);
+			toggleRef.current.focus();
+		}
+	};
+
+	const handleToggle = () => setIsOpen((open) => !open);
 
 	return (
-		<nav className="main-nav" aria-label="Main navigation">
+		<nav className="main-nav" aria-label="Main navigation" onKeyDown={handleKeyDown}>
 			<button
+				ref={toggleRef}
 				type="button"
 				className={`main-nav__toggle${isOpen ? ' main-nav__toggle--open' : ''}`}
+				aria-label="Menu"
 				aria-expanded={isOpen}
 				aria-controls="primary-navigation"
-				onClick={() => setIsOpen(!isOpen)}
+				onClick={handleToggle}
 			>
 				<span className="main-nav__bar main-nav__bar--top" aria-hidden="true" />
 				<span className="main-nav__bar main-nav__bar--middle" aria-hidden="true" />
@@ -29,7 +42,7 @@ export default function Nav() {
 
 			<ul
 				id="primary-navigation"
-				className={`main-nav__list ${isOpen ? 'main-nav__list--open' : ''}`}
+				className={`main-nav__list${isOpen ? ' main-nav__list--open' : ''}`}
 			>
 				{navItems.map(({ label, href }) => (
 					<li key={label} className="main-nav__item">

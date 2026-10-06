@@ -1,17 +1,17 @@
 .site-footer {
 	background: var(--color-primary-dark);
-	color: var(--color-surface);
-	padding: 1rem var(--spacing-md);
+	color: var(--color-text-strong);
+	padding: var(--spacing-md);
 	text-align: center;
-}
-
-.footer-text {
-	font-size: 0.95rem;
-	opacity: 0.9;
 }
 
 @media (min-width: 576px) {
 	.site-footer {
 		padding: 1.25rem var(--spacing-lg);
 	}
+}
+
+.site-footer__text {
+	font-size: 0.95rem;
+	opacity: 0.9;
 }

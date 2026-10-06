@@ -1,0 +1,19 @@
+/* Hidden until focused with the keyboard, then shown at the top left */
+.skip-link {
+	background-color: var(--color-accent);
+	border-radius: var(--radius-sm);
+	color: var(--color-text-inverse);
+	font-weight: var(--font-weight-bold);
+	left: var(--spacing-md);
+	padding: var(--spacing-sm) var(--spacing-md);
+	position: absolute;
+	top: var(--spacing-md);
+	transform: translateY(-200%);
+	z-index: var(--z-skip-link);
+}
+
+.skip-link:focus-visible {
+	outline: 3px solid var(--color-focus-ring);
+	outline-offset: 2px;
+	transform: none;
+}

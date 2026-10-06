@@ -4,18 +4,6 @@
 	box-sizing: border-box;
 }
 
-html,
-body,
-#root {
-	margin: 0;
-	padding: 0;
-	min-height: 100%;
-}
-
-html {
-	scroll-behavior: smooth;
-}
-
 body,
 h1,
 h2,
@@ -27,7 +15,7 @@ p,
 ul,
 ol,
 li,
-a,
+figure,
 img,
 button,
 input,
@@ -39,6 +27,7 @@ select {
 
 img {
 	display: block;
+	height: auto;
 	max-width: 100%;
 }
 
