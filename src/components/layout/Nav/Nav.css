@@ -1,5 +1,3 @@
-/* Mobile first: the list is a dropdown under the header until lg (992px) */
-
 .main-nav__toggle {
 	--bar-gap: var(--spacing-xs);
 	--bar-height: 2px;
@@ -28,7 +26,6 @@
 	}
 }
 
-/* Hover only on real pointers, so it doesn't stick after a tap */
 @media (hover: hover) {
 	.main-nav__toggle:hover {
 		background-color: var(--color-surface-muted);

@@ -35,6 +35,7 @@
 	--color-text-strong: var(--color-gray-900);
 	--color-text-muted: var(--color-gray-400);
 	--color-text-inverse: var(--color-white);
+	--color-text-price: var(--color-brand-salmon);
 
 	--color-interactive: var(--color-primary);
 	--color-interactive-text: var(--color-text);
@@ -74,7 +75,7 @@
 
 	--line-height-heading: 0.85;
 	--line-height-tight: 1.2;
-	--line-height-body: 1.625;
+	--line-height-body: 1.4;
 
 	/* ---------- Spacing ---------- */
 	--spacing-xs: 0.25rem; /* 4px */

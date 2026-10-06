@@ -1,0 +1,27 @@
+/* Mobile: one swipeable row where the next card peeks in */
+.card-grid {
+	display: grid;
+	gap: var(--spacing-md);
+	grid-auto-columns: 85%;
+	grid-auto-flow: column;
+	margin-inline: calc(-1 * var(--spacing-lg));
+	overflow-x: auto;
+	overscroll-behavior-x: contain;
+	padding-inline: var(--spacing-lg);
+	scroll-padding-inline: var(--spacing-lg);
+	scroll-snap-type: x mandatory;
+}
+
+@media (min-width: 768px) {
+	.card-grid {
+		grid-auto-flow: row;
+		grid-template-columns: repeat(3, minmax(0, 1fr));
+		margin-inline: 0;
+		overflow-x: visible;
+		padding-inline: 0;
+	}
+}
+
+.card-grid__item {
+	scroll-snap-align: start;
+}

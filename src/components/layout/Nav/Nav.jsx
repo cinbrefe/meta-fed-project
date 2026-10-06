@@ -2,7 +2,6 @@ import { useRef, useState } from 'react';
 import './Nav.css';
 
 const navItems = [
-	{ label: 'Home', href: '#home' },
 	{ label: 'About', href: '#about' },
 	{ label: 'Menu', href: '#menu' },
 	{ label: 'Reservation', href: '#reservation' },

@@ -1,0 +1,13 @@
+.menu__inner {
+	display: flex;
+	flex-direction: column;
+	gap: var(--spacing-2xl);
+}
+
+.menu__header {
+	align-items: center;
+	display: flex;
+	flex-wrap: wrap;
+	gap: var(--spacing-md);
+	justify-content: space-between;
+}
