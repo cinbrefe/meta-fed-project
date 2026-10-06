@@ -1,4 +1,5 @@
 import { useRef, useEffect } from 'react';
+import { createPortal } from 'react-dom';
 
 import './Modal.css';
 
@@ -15,7 +16,7 @@ export default function Modal({ isOpen, onClose, title, children }) {
 		if (e.target === dialogRef.current) onClose();
 	};
 
-	return (
+	return createPortal(
 		<dialog
 			ref={dialogRef}
 			className="modal"
@@ -32,6 +33,7 @@ export default function Modal({ isOpen, onClose, title, children }) {
 				</header>
 				{children}
 			</div>
-		</dialog>
+		</dialog>,
+		document.getElementById('modal')
 	);
 }
